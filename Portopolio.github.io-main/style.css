@@ -1,0 +1,440 @@
+/* Universal Selector */
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+/* Root */
+
+:root {
+  scroll-behavior: smooth;
+}
+
+/* Body */
+
+body {
+  background-color: white;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+/* header ========================================================*/
+
+header {
+  grid-area: header;
+  position: sticky;
+  border-bottom: white solid 1px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #1e283c;
+  z-index: 1;
+}
+
+/* Header - Navigasi */
+
+nav {
+  background-color: #1e283c;
+  margin: 1.5em 5vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav h1 {
+  color: #08bdba;
+  font-size: 18px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  margin: 0 0.5em;
+}
+
+nav a {
+  color: white;
+}
+
+nav a:hover {
+  color: #08bdba;
+  transition: 0.5s;
+}
+
+/* Navigasi - Hamburger */
+
+#check {
+  display: none;
+}
+
+nav img {
+  height: 20px;
+}
+
+nav label {
+  display: none;
+}
+
+/* main ========================================================*/
+
+main {
+  grid-area: main;
+}
+
+/* Section Beranda */
+
+#beranda {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5em 5vw;
+  scroll-margin-top: 20vh;
+}
+
+/* left beranda */
+
+.left-beranda {
+  margin: auto 0;
+}
+
+.left-beranda p {
+  color: #08bdba;
+}
+
+.left-beranda h1 {
+  font-size: 2.5rem;
+}
+
+.left-beranda h2 {
+  font-weight: lighter;
+  font-size: large;
+}
+
+.left-beranda a {
+  display: inline-block;
+  color: white;
+  background-color: #08bdba;
+  width: 140px;
+  height: 35px;
+  border-radius: 50px;
+  line-height: 35px;
+  text-align: center;
+  margin: 1.5em 0;
+}
+
+.left-beranda a:hover {
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+/* right beranda */
+
+.right-beranda img {
+  width: 400px;
+}
+
+/* tentang saya */
+
+#tentang-saya {
+  text-align: center;
+  padding: 5em 5em;
+  scroll-margin-top: 15vh;
+  background-color: #1e283c;
+}
+
+#tentang-saya h2 {
+  color: #08bdba;
+  font-size: medium;
+  margin-bottom: 1em;
+}
+
+#tentang-saya p {
+  color: white;
+}
+
+/* Media Responsive */
+
+@media (max-width: 768px) {
+  nav ul {
+    position: fixed;
+    top: 70px;
+    left: 100%;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    background-color: #08bdba;
+    transition: 0.5s;
+  }
+
+  nav li {
+    line-height: 80px;
+    margin: 0;
+  }
+
+  nav a {
+    color: #1e283c;
+  }
+
+  nav li:hover {
+    background-color: white;
+    transition: 0.5s;
+    color: #08bdba;
+  }
+
+  /* responsive hamburger */
+
+  nav label {
+    display: block;
+  }
+
+  #check:checked ~ ul {
+    left: 0 !important;
+  }
+
+  /* responsive beranda */
+
+  #beranda {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  #beranda .left-beranda {
+    margin-top: 2em;
+  }
+
+  .right-beranda img {
+    width: 100% !important;
+  }
+}
+
+/* portofolio */
+
+#portofolio {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "top"
+    "bottom";
+  margin: 2em 0;
+  scroll-margin-top: 17vh;
+}
+
+/* top portofolio */
+
+.top-portofolio {
+  grid-area: top;
+  text-align: center;
+}
+
+.top-portofolio h2 {
+  color: #08bdba;
+  font-size: medium;
+}
+
+.top-portofolio h3 {
+  font-size: xx-large;
+  margin: 0.2em 0;
+}
+
+.top-portofolio p {
+  margin-bottom: 1em;
+}
+
+/* bottom portofolio */
+
+.bottom-portofolio {
+  grid-area: bottom;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.bottom-portofolio figure {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px lightgray;
+  margin: 1em;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-portofolio img {
+  width: 100%;
+  margin: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.bottom-portofolio p {
+  background-color: white;
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+  margin-top: auto;
+  background-color: #08bdba;
+  color: white;
+  padding: 0.2em;
+  display: block;
+  text-shadow: white 1px 0 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* kontak */
+
+#kontak {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "top"
+    "bottom";
+  margin: 2em 0;
+  justify-content: center;
+  scroll-margin-top: 20vh;
+}
+
+/* top-kontak */
+
+.top-kontak {
+  grid-area: top;
+  text-align: center;
+  padding: 0 0 2em 0;
+}
+
+.top-kontak h2 {
+  font-size: medium;
+  color: #08bdba;
+}
+
+.top-kontak h3 {
+  font-size: xx-large;
+  margin: 0.2em 0;
+}
+
+/* bottom-kontak */
+
+.bottom-kontak {
+  grid-area: bottom;
+  padding: 1em;
+}
+
+.bottom-kontak form {
+  display: grid;
+}
+
+.bottom-kontak label {
+  color: #08bdba;
+  font-weight: bold;
+  display: block;
+}
+
+.bottom-kontak input {
+  display: block;
+  width: 100%;
+  height: 25px;
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  border: none;
+  outline-width: 0;
+  background-color: rgb(228, 228, 228);
+}
+
+.bottom-kontak textarea {
+  display: block;
+  width: 100%;
+  border: none;
+  margin-bottom: 0.5em;
+  border-radius: 3px;
+  border: none;
+  background-color: transparent;
+  padding: 5px;
+  outline: none;
+  background-color: rgb(228, 228, 228);
+}
+
+.bottom-kontak button {
+  background-color: #08bdba;
+  width: 140px;
+  height: 30px;
+  margin-top: 0.8em;
+  border-radius: 50px;
+  line-height: 30px;
+  text-align: center;
+  border: none;
+  color: white;
+  justify-self: center;
+  font-size: small;
+}
+
+.bottom-kontak button:hover {
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+/* Footer ========================================================*/
+
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "top"
+    "bottom";
+  background-color: #1e283c;
+  color: white;
+  padding: 2em 5vw;
+  scroll-margin-top: 20vh;
+}
+
+.top-footer {
+  text-align: center;
+}
+
+.top-footer h3 {
+  font-size: xx-large;
+  margin: 0.2em 0;
+}
+
+.icon-figure {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon {
+  margin: 0.5em 0.5em;
+  opacity: 0.4;
+}
+
+footer p {
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+/* media ==================================================== */
+
+@media (max-width: 768px) {
+  #portofolio .bottom-portofolio {
+    grid-template-columns: 1fr;
+  }
+
+  footer .top-footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+}

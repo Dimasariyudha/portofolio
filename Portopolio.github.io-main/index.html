@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Dimas ariyudha</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header =============================================================== -->
+    <header>
+      <nav>
+        <h1>Dimas Ariyudha</h1>
+        <input type="checkbox" id="check" />
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#tentang-saya">Tentang Saya</a></li>
+          <li><a href="#portofolio">Portofolio</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+        <label for="check">
+          <img src="img/bar.svg" alt="hamburger bar" />
+        </label>
+      </nav>
+    </header>
+
+    <!-- main =============================================================== -->
+    <main>
+      <!-- beranda =============================================================== -->
+      <section id="beranda">
+        <section class="left-beranda">
+          <p>Halo Semua &#128075;, saya</p>
+          <h1>Dimas Ariyudha</h1>
+          <h2>Saya seorang Web Developer</h2>
+          <a href="mailto: dimasarid1717@gmail.com">Hubungi Saya</a>
+        </section>
+        <section class="right-beranda">
+          <img src="img/image.png" alt="Dimas" />
+        </section>
+      </section>
+
+      <!-- tentang saya =============================================================== -->
+      <section id="tentang-saya">
+        <h2>Tentang Saya</h2>
+        <p>
+          Saya adalah seorang Mahasiswa jurusan Teknik Informatika Prodi Perangkat Lunak
+          dari Politeknik Negeri Medan yang saat ini sedang belajar
+          mendalami Web Development
+        </p>
+      </section>
+
+      <!-- portofolio =============================================================== -->
+      <div class="body-container">
+        <section id="portofolio">
+          <div class="top-portofolio">
+            <h2>Portofolio</h2>
+            <h3>Project Terbaru</h3>
+            <p>
+              Di bawah ini adalah kumpulan Project terbaru yang telah saya
+              kerjakan untuk 1 bulan ini
+            </p>
+          </div>
+          <div class="bottom-portofolio">
+            <figure>
+              <img
+                src="img/portofolio-1.jpg"
+                alt="portofolio-1-website-form-profile"
+              />
+              <p>Website Blog</p>
+            </figure>
+            <figure>
+              <img
+                src="img/portofolio-2.jpg"
+                alt="portofolio-2-website-landing-page"
+              />
+              <p>Website Resolusi Bulanan</p>
+            </figure>
+          </div>
+        </section>
+      </div>
+
+      <!-- kontak =============================================================== -->
+      <section id="kontak">
+        <div class="top-kontak">
+          <h2>Kontak</h2>
+          <h3>Hubungi saya</h3>
+          <p>Kamu bisa mengirimi saya pesan lewat form dibawah ini</p>
+        </div>
+        <section class="bottom-kontak">
+          <form action="https://getform.io/f/6e9d7bef-09ca-401a-9a05-3be193e8a7fc" method="POST">
+            <label for="nama">Nama</label>
+            <input type="text" name="name" /><br />
+            <label for="email">Email</label>
+            <input type="email" name="email" /><br />
+            <label for="message">Pesan</label>
+            <textarea type="email" name="message" rows="5"></textarea>
+            <button type="submit">Kirim</button>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <!-- footer =============================================================== -->
+    <footer>
+      <section class="top-footer">
+        <h3>Mari berteman</h3>
+        <p>
+          Ingin mengenal saya lebih dalam? Yuk! Kunjungi akun media sosial saya
+          lewat icon yang ada dibawah ini &#128071;
+        </p>
+        <div class="icon-figure">
+          <figure class="icon">
+            <a
+              href="https://www.youtube.com/@Chunchunmaru802/videos"
+              ><img src="img/youtube.svg" alt="Youtube" width="25" height="25"
+            /></a>
+          </figure>
+          <figure class="icon">
+            <a href="https://www.instagram.com/dmss_ryudha/"
+              ><img
+                src="img/instagram.svg"
+                alt="Instagram"
+                width="25"
+                height="25"
+            /></a>
+          </figure>
+          <figure class="icon">
+            <a href="https://twitter.com/D_ariyudha"
+              ><img src="img/twitter.svg" alt="Twitter" width="25" height="25"
+            /></a>
+          </figure>
+          <figure class="icon">
+            <a href="https://https://www.facebook.com/dimas.ariyudha.3/"
+              ><img
+                src="img/facebook.svg"
+                alt="facebook"
+                width="25"
+                height="25"
+            /></a>
+          </figure>
+          <figure class="icon">
+            <a href="https://www.linkedin.com/in/dimas-ariyudha-652023309/"
+              ><img
+                src="img/linkedin.svg"
+                alt="Linkedln"
+                width="25"
+                height="25"
+            /></a>
+          </figure>
+          <figure class="icon">
+            <a href="https://github.com/Dimasariyudha"
+              ><img src="img/github.svg" alt="github" width="25" height="25"
+            /></a>
+          </figure>
+        </div>
+      </section>
+      <hr />
+      <p class="footer_copy">&copy; 2024 Dimas Ariyudha</p>
+    </footer>
+  </body>
+</html>
